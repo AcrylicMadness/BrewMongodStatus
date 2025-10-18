@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1058px" height="1522px" viewBox="0 0 1058 1522" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Rectangle Copy</title>
+    <defs>
+        <path d="M358.943928,0.0582524272 L665.056072,0.0582524272 C789.868696,0.0582524272 835.128769,13.053838 880.758398,37.456831 C926.388028,61.8598239 962.198428,97.6702243 986.601421,143.299854 C1011.00441,188.929484 1024,234.189557 1024,359.00218 L1024,1129.11432 C1024,1253.92695 1011.00441,1299.18702 986.601421,1344.81665 C962.198428,1390.44628 926.388028,1426.25668 880.758398,1450.65967 C835.128769,1475.06267 789.868696,1488.05825 665.056072,1488.05825 L358.943928,1488.05825 C234.131304,1488.05825 188.871231,1475.06267 143.241602,1450.65967 C97.6119719,1426.25668 61.8015715,1390.44628 37.3985785,1344.81665 C12.9955856,1299.18702 0,1253.92695 0,1129.11432 L0,359.00218 C0,234.189557 12.9955856,188.929484 37.3985785,143.299854 C61.8015715,97.6702243 97.6119719,61.8598239 143.241602,37.456831 C188.871231,13.053838 234.131304,0.0582524272 358.943928,0.0582524272 Z" id="path-1"></path>
+        <filter x="-2.7%" y="-1.5%" width="105.5%" height="103.8%" filterUnits="objectBoundingBox" id="filter-3">
+            <feOffset dx="0" dy="5" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="8.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.853572237   0 0 0 0 0.853572237   0 0 0 0 0.853572237  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Rectangle-Copy-4" transform="translate(17, 11.9417)">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <g id="Rectangle-Copy">
+                <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-1"></use>
+                <use fill="#000000" fill-rule="evenodd" xlink:href="#path-1"></use>
+            </g>
+        </g>
+    </g>
+</svg>

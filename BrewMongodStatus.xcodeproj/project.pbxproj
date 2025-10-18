@@ -3,24 +3,26 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 70;
 	objects = {
-
-/* Begin PBXBuildFile section */
-		25F8F9902A411DB80077ED1C /* BrewMongodStatusApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F8F98F2A411DB80077ED1C /* BrewMongodStatusApp.swift */; };
-		25F8F9922A411DB80077ED1C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F8F9912A411DB80077ED1C /* ContentView.swift */; };
-		25F8F9942A411DB80077ED1C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25F8F9932A411DB80077ED1C /* Assets.xcassets */; };
-		25F8F9972A411DB80077ED1C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25F8F9962A411DB80077ED1C /* Preview Assets.xcassets */; };
-/* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		25F8F98C2A411DB80077ED1C /* BrewMongodStatus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrewMongodStatus.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		25F8F98F2A411DB80077ED1C /* BrewMongodStatusApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrewMongodStatusApp.swift; sourceTree = "<group>"; };
-		25F8F9912A411DB80077ED1C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		25F8F9932A411DB80077ED1C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		25F8F9962A411DB80077ED1C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		25F8F9982A411DB80077ED1C /* BrewMongodStatus.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BrewMongodStatus.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		48DE7C4B2EA265E5005A16EC /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 25F8F98B2A411DB80077ED1C /* BrewMongodStatus */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		48DE7C3D2EA25CC6005A16EC /* BrewMongodStatus */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (48DE7C4B2EA265E5005A16EC /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = BrewMongodStatus; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		25F8F9892A411DB80077ED1C /* Frameworks */ = {
@@ -36,7 +38,7 @@
 		25F8F9832A411DB70077ED1C = {
 			isa = PBXGroup;
 			children = (
-				25F8F98E2A411DB80077ED1C /* BrewMongodStatus */,
+				48DE7C3D2EA25CC6005A16EC /* BrewMongodStatus */,
 				25F8F98D2A411DB80077ED1C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -47,26 +49,6 @@
 				25F8F98C2A411DB80077ED1C /* BrewMongodStatus.app */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		25F8F98E2A411DB80077ED1C /* BrewMongodStatus */ = {
-			isa = PBXGroup;
-			children = (
-				25F8F98F2A411DB80077ED1C /* BrewMongodStatusApp.swift */,
-				25F8F9912A411DB80077ED1C /* ContentView.swift */,
-				25F8F9932A411DB80077ED1C /* Assets.xcassets */,
-				25F8F9982A411DB80077ED1C /* BrewMongodStatus.entitlements */,
-				25F8F9952A411DB80077ED1C /* Preview Content */,
-			);
-			path = BrewMongodStatus;
-			sourceTree = "<group>";
-		};
-		25F8F9952A411DB80077ED1C /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				25F8F9962A411DB80077ED1C /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -84,6 +66,9 @@
 			);
 			dependencies = (
 			);
+			fileSystemSynchronizedGroups = (
+				48DE7C3D2EA25CC6005A16EC /* BrewMongodStatus */,
+			);
 			name = BrewMongodStatus;
 			productName = BrewMongodStatus;
 			productReference = 25F8F98C2A411DB80077ED1C /* BrewMongodStatus.app */;
@@ -97,7 +82,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1430;
-				LastUpgradeCheck = 1430;
+				LastUpgradeCheck = 2600;
 				TargetAttributes = {
 					25F8F98B2A411DB80077ED1C = {
 						CreatedOnToolsVersion = 14.3.1;
@@ -127,8 +112,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				25F8F9972A411DB80077ED1C /* Preview Assets.xcassets in Resources */,
-				25F8F9942A411DB80077ED1C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,8 +122,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				25F8F9922A411DB80077ED1C /* ContentView.swift in Sources */,
-				25F8F9902A411DB80077ED1C /* BrewMongodStatusApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,6 +132,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -180,9 +162,12 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = KYASY7DN65;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -202,6 +187,7 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -211,6 +197,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -240,9 +227,12 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = KYASY7DN65;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -255,6 +245,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 			};
@@ -265,23 +256,43 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				AUTOMATION_APPLE_EVENTS = NO;
 				CODE_SIGN_ENTITLEMENTS = BrewMongodStatus/BrewMongodStatus.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 16;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"BrewMongodStatus/Preview Content\"";
-				DEVELOPMENT_TEAM = KYASY7DN65;
+				ENABLE_APP_SANDBOX = NO;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_RESOURCE_ACCESS_AUDIO_INPUT = NO;
+				ENABLE_RESOURCE_ACCESS_CALENDARS = NO;
+				ENABLE_RESOURCE_ACCESS_CAMERA = NO;
+				ENABLE_RESOURCE_ACCESS_CONTACTS = NO;
+				ENABLE_RESOURCE_ACCESS_LOCATION = NO;
+				ENABLE_RESOURCE_ACCESS_PHOTO_LIBRARY = NO;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BrewMongodStatus/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Brew DB Status";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
+				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MACOSX_DEPLOYMENT_TARGET = 26;
+				MARKETING_VERSION = 1.4.0;
 				PRODUCT_BUNDLE_IDENTIFIER = net.averkiev.BrewMongodStatus;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				RUNTIME_EXCEPTION_ALLOW_DYLD_ENVIRONMENT_VARIABLES = NO;
+				RUNTIME_EXCEPTION_ALLOW_JIT = YES;
+				RUNTIME_EXCEPTION_ALLOW_UNSIGNED_EXECUTABLE_MEMORY = YES;
+				RUNTIME_EXCEPTION_DEBUGGING_TOOL = YES;
+				RUNTIME_EXCEPTION_DISABLE_EXECUTABLE_PAGE_PROTECTION = NO;
+				RUNTIME_EXCEPTION_DISABLE_LIBRARY_VALIDATION = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
@@ -292,23 +303,43 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				AUTOMATION_APPLE_EVENTS = NO;
 				CODE_SIGN_ENTITLEMENTS = BrewMongodStatus/BrewMongodStatus.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 16;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"BrewMongodStatus/Preview Content\"";
-				DEVELOPMENT_TEAM = KYASY7DN65;
+				ENABLE_APP_SANDBOX = NO;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_RESOURCE_ACCESS_AUDIO_INPUT = NO;
+				ENABLE_RESOURCE_ACCESS_CALENDARS = NO;
+				ENABLE_RESOURCE_ACCESS_CAMERA = NO;
+				ENABLE_RESOURCE_ACCESS_CONTACTS = NO;
+				ENABLE_RESOURCE_ACCESS_LOCATION = NO;
+				ENABLE_RESOURCE_ACCESS_PHOTO_LIBRARY = NO;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BrewMongodStatus/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Brew DB Status";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
+				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MACOSX_DEPLOYMENT_TARGET = 26;
+				MARKETING_VERSION = 1.4.0;
 				PRODUCT_BUNDLE_IDENTIFIER = net.averkiev.BrewMongodStatus;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				RUNTIME_EXCEPTION_ALLOW_DYLD_ENVIRONMENT_VARIABLES = NO;
+				RUNTIME_EXCEPTION_ALLOW_JIT = YES;
+				RUNTIME_EXCEPTION_ALLOW_UNSIGNED_EXECUTABLE_MEMORY = YES;
+				RUNTIME_EXCEPTION_DEBUGGING_TOOL = YES;
+				RUNTIME_EXCEPTION_DISABLE_EXECUTABLE_PAGE_PROTECTION = NO;
+				RUNTIME_EXCEPTION_DISABLE_LIBRARY_VALIDATION = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};

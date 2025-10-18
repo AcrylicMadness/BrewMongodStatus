@@ -1,0 +1,129 @@
+{
+  "fill-specializations" : [
+    {
+      "value" : {
+        "automatic-gradient" : "extended-gray:0.78029,1.00000"
+      }
+    },
+    {
+      "appearance" : "dark",
+      "value" : {
+        "automatic-gradient" : "gray:0.16085,1.00000"
+      }
+    }
+  ],
+  "groups" : [
+    {
+      "layers" : [
+        {
+          "fill" : {
+            "automatic-gradient" : "gray:0.40000,1.00000"
+          },
+          "image-name" : "Frame Copy.png",
+          "name" : "Frame Copy",
+          "position" : {
+            "scale" : 1,
+            "translation-in-points" : [
+              0,
+              -20
+            ]
+          }
+        },
+        {
+          "fill-specializations" : [
+            {
+              "appearance" : "dark",
+              "value" : "none"
+            }
+          ],
+          "glass" : false,
+          "hidden" : false,
+          "image-name" : "Frame 2.png",
+          "name" : "Frame 2"
+        },
+        {
+          "fill-specializations" : [
+            {
+              "value" : {
+                "automatic-gradient" : "gray:0.78000,1.00000"
+              }
+            },
+            {
+              "appearance" : "dark",
+              "value" : {
+                "automatic-gradient" : "gray:0.16085,1.00000"
+              }
+            }
+          ],
+          "hidden" : false,
+          "image-name" : "Rectangle Copy 2.svg",
+          "name" : "Rectangle Copy 2",
+          "opacity-specializations" : [
+            {
+              "value" : 0.8
+            },
+            {
+              "appearance" : "tinted",
+              "value" : 0.1
+            }
+          ],
+          "position" : {
+            "scale" : 1,
+            "translation-in-points" : [
+              0,
+              -550
+            ]
+          }
+        },
+        {
+          "fill-specializations" : [
+            {
+              "value" : {
+                "automatic-gradient" : "extended-gray:0.78029,1.00000"
+              }
+            },
+            {
+              "appearance" : "dark",
+              "value" : {
+                "automatic-gradient" : "gray:0.16085,1.00000"
+              }
+            }
+          ],
+          "glass" : true,
+          "hidden" : false,
+          "image-name" : "Rectangle Copy.svg",
+          "name" : "Rectangle Copy",
+          "opacity-specializations" : [
+            {
+              "value" : 0.9
+            },
+            {
+              "appearance" : "tinted",
+              "value" : 0.1
+            }
+          ],
+          "position" : {
+            "scale" : 1,
+            "translation-in-points" : [
+              0,
+              -380
+            ]
+          }
+        }
+      ],
+      "shadow" : {
+        "kind" : "neutral",
+        "opacity" : 0.5
+      },
+      "translucency" : {
+        "enabled" : true,
+        "value" : 0.5
+      }
+    }
+  ],
+  "supported-platforms" : {
+    "squares" : [
+      "macOS"
+    ]
+  }
+}
