@@ -5,31 +5,14 @@
 //  Created by Acrylic M. on 07.10.2025.
 //
 
-enum ServiceProvider: String, Codable {
-    case postgresql = "PostgreSQL"
-    case mongodb = "MongoDB"
+struct ServiceProvider: Codable {
+    let serviceName: String
     
-    var commands: ServiceCommands {
-        switch self {
-        case .mongodb:
-            return .mongodb
-        case .postgresql:
-            return .postgresql
-        }
-    }
-    
-    var serviceName: String {
-        switch self {
-        case .mongodb:
-            return "mongodb-community"
-        case .postgresql:
-            return "postgresql"
-        }
+    init(serviceName: String) {
+        self.serviceName = serviceName
     }
 }
 
-extension ServiceProvider: Identifiable {
-    var id: String { rawValue }
+extension ServiceProvider: Identifiable, Hashable {
+    var id: String { serviceName }
 }
-
-extension ServiceProvider: CaseIterable { }

@@ -22,7 +22,7 @@ struct MenubarServiceView: View {
                     Image(systemName: serviceManager.info[provider]!.isRunning ? "play.circle.fill" : "stop.circle.fill")
                         .foregroundStyle(serviceManager.info[provider]!.isRunning ? Color.green : Color.red)
                 }
-                Text(provider.rawValue)
+                Text(provider.serviceName)
             }
             Spacer()
             
@@ -81,5 +81,10 @@ struct MenubarServiceView: View {
 }
 
 #Preview {
-    MenubarServiceView(serviceManager: .constant(ServiceManager()), provider: .mongodb)
+    MenubarServiceView(
+        serviceManager: .constant(ServiceManager()),
+        provider: ServiceProvider(
+            serviceName: "Test"
+        )
+    )
 }

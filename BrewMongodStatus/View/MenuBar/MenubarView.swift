@@ -10,12 +10,11 @@ import SwiftUI
 struct MenubarView: View {
     
     @Binding var serviceManager: ServiceManager
-    @State var providers: [ServiceProvider] = ServiceProvider.allCases
     @Environment(\.openWindow) var openWindow
     
     var body: some View {
         VStack(alignment: .leading) {
-            ForEach(providers) { provider in
+            ForEach(serviceManager.providers) { provider in
                 MenubarServiceView(serviceManager: $serviceManager, provider: provider)
                     .background(Color(nsColor: .tertiarySystemFill))
                     .cornerRadius(10)

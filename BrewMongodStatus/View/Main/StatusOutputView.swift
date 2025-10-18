@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  StatusOutputView.swift
 //  BrewMongodStatus
 //
 //  Created by Кирилл Аверкиев on 20.06.2023.
@@ -7,16 +7,14 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct StatusOutputView: View {
     
     @Environment(\.colorScheme) var colorScheme
-    
-    @State var selectedProvider: ServiceProvider = ServiceProvider.allCases.first!
     @Binding var serviceManager: ServiceManager
 
     var body: some View {
         VStack {
-            Table(serviceManager.info[selectedProvider]!.output) {
+            Table(serviceManager.info[serviceManager.selectedProvider]!.output) {
                 TableColumn("Output") { output in
                     Text(output.text)
                         .textSelection(.enabled)
@@ -29,41 +27,41 @@ struct ContentView: View {
                 providerSelector
             }
             ToolbarItem(placement: .cancellationAction) {
-                if serviceManager.info[selectedProvider]!.isFetching {
+                if serviceManager.info[serviceManager.selectedProvider]!.isFetching {
                     ProgressView()
                         .controlSize(.small)
                         .padding(.horizontal, 10)
                 } else {
                     HStack {
-                        Image(systemName: serviceManager.info[selectedProvider]!.isRunning ? "play.circle.fill" : "stop.circle.fill")
-                            .foregroundColor(serviceManager.info[selectedProvider]!.isRunning ? Color.green : Color.red)
-                        Text(serviceManager.info[selectedProvider]!.isRunning ? "Running" : "Stopped")
-                            .foregroundColor(serviceManager.info[selectedProvider]!.isRunning ? Color.green : Color.red)
+                        Image(systemName: serviceManager.info[serviceManager.selectedProvider]!.isRunning ? "play.circle.fill" : "stop.circle.fill")
+                            .foregroundColor(serviceManager.info[serviceManager.selectedProvider]!.isRunning ? Color.green : Color.red)
+                        Text(serviceManager.info[serviceManager.selectedProvider]!.isRunning ? "Running" : "Stopped")
+                            .foregroundColor(serviceManager.info[serviceManager.selectedProvider]!.isRunning ? Color.green : Color.red)
                     }
                     .padding(.horizontal, 8)
                 }
             }
-            if !serviceManager.info[selectedProvider]!.isFetching && serviceManager.info[selectedProvider]!.isRunning {
+            if !serviceManager.info[serviceManager.selectedProvider]!.isFetching && serviceManager.info[serviceManager.selectedProvider]!.isRunning {
                 toolbarButton(
                     systemImage: "arrow.clockwise",
                     text: "Restart",
                     run: {
-                        serviceManager.restart(for: selectedProvider)
+                        serviceManager.restart(for: serviceManager.selectedProvider)
                     }
                 )
                 toolbarButton(
                     systemImage: "stop.fill",
                     text: "Stop",
                     run: {
-                        serviceManager.set(running: false, for: selectedProvider)
+                        serviceManager.set(running: false, for: serviceManager.selectedProvider)
                     }
                 )
-            } else if !serviceManager.info[selectedProvider]!.isFetching && !serviceManager.info[selectedProvider]!.isRunning {
+            } else if !serviceManager.info[serviceManager.selectedProvider]!.isFetching && !serviceManager.info[serviceManager.selectedProvider]!.isRunning {
                 toolbarButton(
                     systemImage: "play.fill",
                     text: "Start",
                     run: {
-                        serviceManager.set(running: true, for: selectedProvider)
+                        serviceManager.set(running: true, for: serviceManager.selectedProvider)
                     }
                 )
             }
@@ -92,10 +90,10 @@ struct ContentView: View {
     
     @ViewBuilder
     var providerSelector: some View {
-        Picker("Provider", selection: $selectedProvider) {
-            ForEach(ServiceProvider.allCases) { provider in
-                Text(provider.rawValue)
-                .tag(provider)
+        Picker("Provider", selection: $serviceManager.selectedProvider) {
+            ForEach($serviceManager.providers) { provider in
+                Text(provider.wrappedValue.serviceName)
+                    .tag(provider.wrappedValue)
             }
         }
         .pickerStyle(.menu)
@@ -103,5 +101,5 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView(serviceManager: .constant(ServiceManager()))
+    StatusOutputView(serviceManager: .constant(ServiceManager()))
 }

@@ -30,6 +30,33 @@ struct BrewService {
         setupProcess()
     }
     
+    static func discoverProviders() -> [ServiceProvider] {
+        let discoverProcess = Process()
+        let outputPipe = Pipe()
+        discoverProcess.executableURL = URL(fileURLWithPath: "/opt/homebrew/bin/brew")
+        discoverProcess.standardOutput = outputPipe
+        discoverProcess.arguments = ["services", "list"]
+        try? discoverProcess.run()
+        if
+            let data = try? outputPipe.fileHandleForReading.readToEnd(),
+            let output = String(data: data, encoding: .utf8)
+        {
+            return output
+                .split(separator: "\n")
+                .compactMap({ resultString in
+                    if let providerName = resultString.split(separator: " ").first {
+                        if providerName.uppercased() != "NAME" {
+                            return ServiceProvider(serviceName: String(providerName))
+                        }
+                    }
+                    return nil
+                })
+            
+        }
+        
+        return []
+    }
+    
     mutating
     private func setupProcess() {
         process = nil

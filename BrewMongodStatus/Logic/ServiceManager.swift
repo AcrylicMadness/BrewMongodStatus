@@ -18,21 +18,26 @@ struct ServiceInfo: Codable {
 @Observable
 class ServiceManager {
     
+    static var shared: ServiceManager = ServiceManager()
+    
+    var providers: [ServiceProvider] = []
     var info: [ServiceProvider: ServiceInfo] = [:]
+    var selectedProvider: ServiceProvider = ServiceProvider(serviceName: "")
     private var services: [ServiceProvider: BrewService] = [:]
     
     init() {
-        ServiceProvider
-            .allCases
+        providers = BrewService.discoverProviders()
+        selectedProvider = providers.first ?? ServiceProvider(serviceName: "No services")
+        providers
             .forEach({
                 info[$0] = ServiceInfo()
                 services[$0] = BrewService(provider: $0)
             })
         updateAll()
     }
-    
+
     func updateAll() {
-        for provider in ServiceProvider.allCases {
+        for provider in providers {
             getInfo(for: provider)
         }
     }
