@@ -51,9 +51,7 @@ struct BrewService {
                     }
                     return nil
                 })
-            
         }
-        
         return []
     }
     
@@ -96,7 +94,7 @@ struct BrewService {
     }
 }
 
-struct Output: Codable, Identifiable {
+struct Output: Codable, Identifiable, Hashable {
     let id: UUID
     let text: String
     

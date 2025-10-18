@@ -15,19 +15,19 @@ struct MenubarServiceView: View {
     var body: some View {
         HStack(alignment: .center) {
             HStack {
-                if serviceManager.info[provider]!.isFetching {
+                if serviceManager.providers[serviceManager.index(of: provider)].isFetching {
                     ProgressView()
                         .controlSize(.small)
                 } else {
-                    Image(systemName: serviceManager.info[provider]!.isRunning ? "play.circle.fill" : "stop.circle.fill")
-                        .foregroundStyle(serviceManager.info[provider]!.isRunning ? Color.green : Color.red)
+                    Image(systemName: serviceManager.providers[serviceManager.index(of: provider)].isRunning ? "play.circle.fill" : "stop.circle.fill")
+                        .foregroundStyle(serviceManager.providers[serviceManager.index(of: provider)].isRunning ? Color.green : Color.red)
                 }
                 Text(provider.serviceName)
             }
             Spacer()
             
-            if !serviceManager.info[provider]!.isFetching {
-                if serviceManager.info[provider]!.isRunning {
+            if !serviceManager.providers[serviceManager.index(of: provider)].isFetching {
+                if serviceManager.providers[serviceManager.index(of: provider)].isRunning {
                     Button(action: {
                         serviceManager.restart(for: provider)
                     }, label: {
@@ -61,6 +61,7 @@ struct MenubarServiceView: View {
             
         }
         .padding(5)
+        
     }
     
     @ViewBuilder

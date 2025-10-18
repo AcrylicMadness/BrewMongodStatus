@@ -12,10 +12,22 @@ struct BrewMongodStatusApp: App {
     
     @State var serviceManager: ServiceManager = ServiceManager.shared
     
+    @AppStorage("open_window_on_launch")
+    private var openWindowOnLaunch: Bool = true
+    
     var body: some Scene {
-        Window("DB Status", id: "details-window") {
-            StatusOutputView(serviceManager: $serviceManager)
+        Window("Brew Service Control", id: "details-window") {
+            ServicesView(serviceManager: $serviceManager)
+                .navigationTitle(serviceManager.selectedProvider?.serviceName ?? "Brew Service Control")
+                .onAppear {
+                    NSApplication.shared.setActivationPolicy(.regular)
+                }
+                .onDisappear {
+                    NSApplication.shared.setActivationPolicy(.accessory)
+                }
         }
+        .defaultLaunchBehavior(openWindowOnLaunch ? .presented : .suppressed)
+
         MenuBarExtra("DB Status", systemImage: "server.rack") {
             MenubarView(serviceManager: $serviceManager)
         }
