@@ -14,7 +14,7 @@ struct MenubarView: View {
     @Environment(\.dismissWindow) private var dismissWindow
     
     var body: some View {
-        VStack(alignment: .leading, spacing: 2) {
+        VStack(alignment: .leading, spacing: 5) {
             
             if serviceManager.providers.isEmpty {
                 EmptyProvidersView(serviceManager: $serviceManager, inMenu: true)
@@ -26,7 +26,7 @@ struct MenubarView: View {
                     )
                 }
             }
-            HStack(spacing: 2) {
+            HStack(spacing: 5) {
                 Button(action: {
                     dismissWindow()
                     openWindow(id: "details-window")
@@ -41,7 +41,7 @@ struct MenubarView: View {
                         mainWindow.becomeKey()
                     }
                 }, label: {
-                    HStack {
+                    HStack(spacing: 4) {
                         Image(systemName: "text.and.command.macwindow")
                         Text("Details")
                     }
@@ -51,7 +51,7 @@ struct MenubarView: View {
                 Button(action: {
                     NSApp.terminate(nil)
                 }, label: {
-                    HStack {
+                    HStack(spacing: 4) {
                         Image(systemName: "x.square")
                         Text("Quit")
                     }

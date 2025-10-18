@@ -82,10 +82,12 @@ struct ServiceProviderView: View {
         .padding(6)
         .contentShape(Rectangle())
         .background {
-            if provider == serviceManager.selectedProvider {
-                RoundedRectangle(cornerRadius: 8)
-                    .fill(Color.accent)
-            }
+            RoundedRectangle(cornerRadius: 8)
+                .fill(
+                    provider == serviceManager.selectedProvider ?
+                        Color.accent :
+                        Color.clear
+                )
         }
         .onTapGesture {
             serviceManager.selectedProvider = provider
@@ -101,8 +103,11 @@ struct ServiceProviderView: View {
             run()
         } label: {
             Image(systemName: systemImage)
+                .resizable()
+                .aspectRatio(CGSize(width: 1, height: 1), contentMode: .fit)
+                .frame(width: 12, height: 12)
+                .padding(.vertical, 1)
         }
-        .frame(width: 25, height: 25)
     }
 }
 

@@ -23,7 +23,7 @@ struct ServicesListView: View {
         }
         .listStyle(.sidebar)
         .padding(.horizontal, 0)
-        .frame(minWidth: 250)
+        .frame(minWidth: 280)
         .safeAreaInset(edge: .bottom) {
             HStack {
                 Toggle(isOn: $openWindowOnLaunch) {

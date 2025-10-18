@@ -108,8 +108,12 @@ struct MenuServiceProviderView: View {
             run()
         } label: {
             Image(systemName: systemImage)
+                .resizable()
+                .aspectRatio(CGSize(width: 1, height: 1), contentMode: .fit)
+                .frame(width: 12, height: 12)
+                .padding(.vertical, 1)
         }
-        .frame(width: 25, height: 25)
+        
     }
 }
 
